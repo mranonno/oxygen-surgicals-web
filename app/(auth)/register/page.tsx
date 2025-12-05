@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { User, Mail, Lock } from "lucide-react";
 
 export default function RegisterPage() {
   const [form, setForm] = useState({
@@ -24,7 +25,6 @@ export default function RegisterPage() {
     }
 
     console.log("Register Data:", form);
-    // TODO: Connect to Express backend API
   };
 
   return (
@@ -40,15 +40,18 @@ export default function RegisterPage() {
             <label className="block mb-1 font-medium text-gray-600">
               Full Name
             </label>
-            <input
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="Enter your full name"
-              required
-              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-            />
+            <div className="relative">
+              <User className="absolute left-3 top-3 text-gray-400" size={20} />
+              <input
+                type="text"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+                placeholder="Enter your full name"
+                required
+                className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+              />
+            </div>
           </div>
 
           {/* Email */}
@@ -56,15 +59,18 @@ export default function RegisterPage() {
             <label className="block mb-1 font-medium text-gray-600">
               Email
             </label>
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="Enter your email"
-              required
-              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-            />
+            <div className="relative">
+              <Mail className="absolute left-3 top-3 text-gray-400" size={20} />
+              <input
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                placeholder="Enter your email"
+                required
+                className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+              />
+            </div>
           </div>
 
           {/* Password */}
@@ -72,15 +78,18 @@ export default function RegisterPage() {
             <label className="block mb-1 font-medium text-gray-600">
               Password
             </label>
-            <input
-              type="password"
-              name="password"
-              value={form.password}
-              onChange={handleChange}
-              placeholder="Enter your password"
-              required
-              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-            />
+            <div className="relative">
+              <Lock className="absolute left-3 top-3 text-gray-400" size={20} />
+              <input
+                type="password"
+                name="password"
+                value={form.password}
+                onChange={handleChange}
+                placeholder="Enter your password"
+                required
+                className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+              />
+            </div>
           </div>
 
           {/* Confirm Password */}
@@ -88,15 +97,18 @@ export default function RegisterPage() {
             <label className="block mb-1 font-medium text-gray-600">
               Confirm Password
             </label>
-            <input
-              type="password"
-              name="confirmPassword"
-              value={form.confirmPassword}
-              onChange={handleChange}
-              placeholder="Repeat your password"
-              required
-              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-            />
+            <div className="relative">
+              <Lock className="absolute left-3 top-3 text-gray-400" size={20} />
+              <input
+                type="password"
+                name="confirmPassword"
+                value={form.confirmPassword}
+                onChange={handleChange}
+                placeholder="Repeat your password"
+                required
+                className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+              />
+            </div>
           </div>
 
           {/* Register Button */}

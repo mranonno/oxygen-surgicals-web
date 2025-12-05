@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { Mail } from "lucide-react";
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState("");
@@ -10,8 +11,7 @@ export default function ForgotPasswordPage() {
     e.preventDefault();
     console.log("Forgot Password Email:", email);
 
-    // TODO: Connect with your Express backend
-    // Example: POST /api/auth/forgot-password
+    // TODO: Connect with Express backend API
   };
 
   return (
@@ -32,14 +32,17 @@ export default function ForgotPasswordPage() {
             <label className="block mb-1 font-medium text-gray-600">
               Email
             </label>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
-              required
-              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-            />
+            <div className="relative">
+              <Mail className="absolute left-3 top-3 text-gray-400" size={20} />
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email"
+                required
+                className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+              />
+            </div>
           </div>
 
           {/* Submit Button */}
