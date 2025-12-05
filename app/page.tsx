@@ -1,11 +1,11 @@
+import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white sm:items-start">
-        <Navbar />
-      </main>
-    </div>
+    <main className="flex min-h-screen  flex-col items-center justify-between py-32 font-sans bg-zinc-50 sm:items-start">
+      <Navbar />
+      <Footer />
+    </main>
   );
 }
