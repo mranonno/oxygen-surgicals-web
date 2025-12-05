@@ -22,13 +22,25 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="/dashboard" className="hover:text-blue-600">
-              Dashboard
+            <Link href="/shop" className="hover:text-blue-600">
+              Shop
             </Link>
           </li>
           <li>
+            <Link href="/about" className="hover:text-blue-600">
+              About
+            </Link>
+          </li>
+        </ul>
+        <ul className="hidden md:flex items-center gap-6 text-gray-700 font-medium">
+          <li>
             <Link href="/login" className="hover:text-blue-600">
               Login/Register
+            </Link>
+          </li>
+          <li>
+            <Link href="/cart" className="hover:text-blue-600">
+              Cart
             </Link>
           </li>
         </ul>
