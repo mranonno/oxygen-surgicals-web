@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { ShoppingCart, Menu, X, User } from "lucide-react";
 
@@ -11,8 +12,20 @@ export default function Navbar() {
     <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50 border-b">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold text-blue-600">
-          Oxygen Surgicals
+        <Link
+          href="/"
+          className="flex items-center gap-2 text-2xl font-bold text-blue-600"
+        >
+          <Image
+            src="/icon.png"
+            alt="Oxygen Surgicals Logo"
+            width={32}
+            height={32}
+            priority={true}
+          />
+          <span className="text-3xl font-extrabold text-cyan-600">
+            OXYGEN SURGICALS
+          </span>
         </Link>
 
         {/* Desktop Menu */}
@@ -28,7 +41,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Right side (Login + Cart Icon) */}
+        {/* Right Side (Login + Cart) */}
         <div className="hidden md:flex items-center gap-6 text-gray-700 font-medium">
           <Link
             href="/login"
@@ -43,7 +56,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Toggle Button */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden text-gray-700"
@@ -90,7 +103,7 @@ export default function Navbar() {
             <User size={20} /> Login/Register
           </Link>
 
-          {/* Cart Icon */}
+          {/* Cart */}
           <Link
             href="/cart"
             onClick={() => setOpen(false)}
