@@ -17,13 +17,13 @@ export default function Navbar() {
           className="flex items-center gap-2 text-2xl font-bold text-blue-600"
         >
           <Image
-            src="/icon.png"
+            src="/logo/oxygensurgicals.png"
             alt="Oxygen Surgicals Logo"
-            width={32}
-            height={32}
+            width={80}
+            height={80}
             priority={true}
           />
-          <span className="text-3xl font-extrabold text-cyan-600">
+          <span className="text-4xl font-bold text-cyan-600">
             OXYGEN SURGICALS
           </span>
         </Link>
