@@ -23,7 +23,7 @@ export default function Navbar() {
             height={80}
             priority={true}
           />
-          <span className="text-4xl font-bold text-cyan-600">
+          <span className="text-4xl font-bold text-cyan-500">
             OXYGEN SURGICALS
           </span>
         </Link>
