@@ -3,60 +3,64 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { ShoppingCart, Menu, X, User } from "lucide-react";
+import { ShoppingCart, Menu, X, User, Search } from "lucide-react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50 border-b">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <nav className="w-full bg-white shadow-md border-b">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
         {/* Logo */}
-        <Link
-          href="/"
-          className="flex items-center gap-2 text-2xl font-bold text-blue-600"
-        >
+        <Link href="/" className="flex items-center gap-2">
           <Image
             src="/logo/oxygensurgicals.png"
             alt="Oxygen Surgicals Logo"
-            width={80}
-            height={80}
-            priority={true}
+            width={48}
+            height={48}
+            priority
           />
-          <span className="text-4xl font-bold text-cyan-500">
+
+          {/* 🔵🟢 Gradient Text */}
+          <span className="text-3xl  font-bold bg-linear-to-r to-[#27568D] from-[#0E7A80] bg-clip-text text-transparent text-center">
             OXYGEN SURGICALS
           </span>
         </Link>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-10 text-gray-700 font-medium">
-          <Link href="/" className="hover:text-blue-600">
-            Home
-          </Link>
-          <Link href="/shop" className="hover:text-blue-600">
-            Shop
-          </Link>
-          <Link href="/about" className="hover:text-blue-600">
-            About
-          </Link>
+        {/* Search - Desktop */}
+        <div className="hidden md:block flex-1 max-w-lg relative">
+          <input
+            type="text"
+            placeholder="Search for products..."
+            className="w-full h-11 rounded-3xl pl-5 pr-12 bg-gray-100 border border-gray-300 
+  focus:outline-none focus:border-[#137577] focus:ring-1 focus:ring-[#137577]/40 
+  text-gray-700 placeholder:text-gray-400
+  transition-all duration-300 ease-in-out"
+          />
+
+          <button
+            aria-label="Search"
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-gray-700 p-2 rounded-full"
+          >
+            <Search className="w-4 h-4 text-white" />
+          </button>
         </div>
 
-        {/* Right Side (Login + Cart) */}
+        {/* Right Side */}
         <div className="hidden md:flex items-center gap-6 text-gray-700 font-medium">
           <Link
             href="/login"
-            className="flex items-center gap-1 hover:text-blue-600"
+            className="flex items-center gap-1 hover:text-[#137577]"
           >
-            <User size={20} />
-            <span>Login/Register</span>
+            <User size={20} /> <span>Login/Register</span>
           </Link>
 
-          <Link href="/cart" className="hover:text-blue-600 relative">
+          <Link href="/cart" className="hover:text-[#137577] relative">
             <ShoppingCart size={22} />
           </Link>
         </div>
 
-        {/* Mobile Menu Toggle Button */}
+        {/* Mobile Toggle */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden text-gray-700"
@@ -67,47 +71,55 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden bg-white shadow-md overflow-hidden transition-all duration-300 ${
-          open ? "max-h-96" : "max-h-0"
-        }`}
+        className={`md:hidden bg-white shadow-md overflow-hidden transition-all duration-300 
+        ${open ? "max-h-96" : "max-h-0"}`}
       >
         <ul className="flex flex-col px-4 py-3 gap-3 text-gray-700 font-medium">
+          <div className="relative mb-3">
+            <input
+              type="text"
+              placeholder="Search products..."
+              className="w-full h-10 rounded-xl pl-4 pr-10 bg-gray-100 border border-gray-300"
+            />
+            <Search className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 w-4 h-4" />
+          </div>
+
           <Link
             href="/"
             onClick={() => setOpen(false)}
-            className="hover:text-blue-600"
+            className="hover:text-[#137577]"
           >
             Home
           </Link>
+
           <Link
             href="/shop"
             onClick={() => setOpen(false)}
-            className="hover:text-blue-600"
+            className="hover:text-[#137577]"
           >
             Shop
           </Link>
+
           <Link
             href="/about"
             onClick={() => setOpen(false)}
-            className="hover:text-blue-600"
+            className="hover:text-[#137577]"
           >
             About
           </Link>
 
-          {/* Login */}
           <Link
             href="/login"
             onClick={() => setOpen(false)}
-            className="hover:text-blue-600 flex items-center gap-2"
+            className="flex items-center gap-2 hover:text-[#137577]"
           >
             <User size={20} /> Login/Register
           </Link>
 
-          {/* Cart */}
           <Link
             href="/cart"
             onClick={() => setOpen(false)}
-            className="hover:text-blue-600 flex items-center gap-2"
+            className="flex items-center gap-2 hover:text-[#137577]"
           >
             <ShoppingCart size={20} /> Cart
           </Link>
