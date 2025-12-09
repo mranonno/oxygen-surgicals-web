@@ -1,4 +1,4 @@
-import { Phone } from "lucide-react";
+import { Phone, PackageSearch } from "lucide-react";
 import Link from "next/link";
 
 export const TopNavbar = () => {
@@ -11,8 +11,18 @@ export const TopNavbar = () => {
           <span className="text-sm">+880 1517-806044</span>
         </div>
 
-        {/* Right side - Contact Link */}
-        <div>
+        {/* Right side - Navigation Links */}
+        <div className="flex items-center gap-6">
+          {/* Order Tracking */}
+          <Link
+            href="/order-tracking"
+            className="flex items-center gap-1 text-sm hover:underline"
+          >
+            <PackageSearch size={16} className="text-white" />
+            Order Tracking
+          </Link>
+
+          {/* Contact Us */}
           <Link href="/contact" className="text-sm hover:underline">
             Contact Us
           </Link>
