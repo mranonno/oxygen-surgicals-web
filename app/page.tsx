@@ -7,6 +7,7 @@ import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import ShopByCategory from "@/components/ShopByCategory";
 
 export default function Home() {
   return (
@@ -41,7 +42,7 @@ export default function Home() {
         </SwiperSlide>
       </Swiper>
 
-      <h1 className="text-3xl font-bold mt-4">Welcome to Oxygen Surgicals</h1>
+      <ShopByCategory />
     </div>
   );
 }
