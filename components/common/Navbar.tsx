@@ -22,8 +22,11 @@ export default function Navbar() {
           />
 
           {/* 🔵🟢 Gradient Text */}
-          <span className="text-3xl  font-bold bg-linear-to-r to-[#27568D] from-[#0E7A80] bg-clip-text text-transparent text-center">
-            OXYGEN SURGICALS
+          <span className="text-2xl flex flex-col text-start  font-bold bg-linear-to-r to-[#27568D] from-[#0E7A80] bg-clip-text text-transparent">
+            OXYGEN{" "}
+            <span className="text-2xl font-bold bg-linear-to-r to-[#27568D] from-[#0E7A80] bg-clip-text text-transparent -mt-2 text-center">
+              SURGICALS
+            </span>
           </span>
         </Link>
 
