@@ -33,7 +33,7 @@ export default function Home() {
         <SwiperSlide>
           <div className="relative w-full h-[520px]">
             <Image
-              src="/banner/slider_1.jpg"
+              src="/banner/slider_2.jpg"
               alt="banner"
               fill
               className="object-cover"
