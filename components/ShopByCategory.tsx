@@ -46,7 +46,7 @@ export default function ShopByCategory() {
         Shop By Popular Categories
       </h1>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 self-center text-center">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 place-items-center text-center">
         {categories.map((category) => {
           const Icon = category.icon;
           return (

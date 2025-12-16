@@ -43,6 +43,9 @@ export default function Home() {
       </Swiper>
 
       <ShopByCategory />
+      <h1 className="text-3xl font-bold text-center mb-8 bg-linear-to-r to-[#27568D] from-[#0E7A80] bg-clip-text text-transparent">
+        Featured Products
+      </h1>
     </div>
   );
 }
