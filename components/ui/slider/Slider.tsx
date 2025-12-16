@@ -2,35 +2,42 @@
 
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
-interface SliderProps {
-  images: string[];
-}
-
-export default function Slider({ images }: SliderProps) {
+export default function Slider() {
   return (
     <Swiper
-      pagination={{ dynamicBullets: true }}
-      modules={[Pagination]}
-      className="mySwiper w-full h-64 md:h-80 lg:h-96"
+      modules={[Pagination, Navigation]}
+      pagination={{ clickable: true }}
+      navigation
+      className="rounded-2xl overflow-hidden"
     >
-      {images.map((img, index) => (
-        <SwiperSlide key={index}>
-          <div className="relative w-full h-full">
-            <Image
-              src={img}
-              alt={`Slide ${index + 1}`}
-              fill
-              className="object-cover rounded-lg"
-              priority={index === 0}
-            />
-          </div>
-        </SwiperSlide>
-      ))}
+      <SwiperSlide>
+        <div className="relative w-full h-[520px]">
+          <Image
+            src="/banner/slider_2.jpg"
+            alt="banner"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </SwiperSlide>
+
+      <SwiperSlide>
+        <div className="relative w-full h-[520px]">
+          <Image
+            src="/banner/slider_1.jpg"
+            alt="banner"
+            fill
+            className="object-cover"
+          />
+        </div>
+      </SwiperSlide>
     </Swiper>
   );
 }
