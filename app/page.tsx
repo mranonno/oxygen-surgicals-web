@@ -16,8 +16,12 @@ export default function Home() {
       <h1 className="text-3xl font-bold text-center mb-8 bg-linear-to-r to-[#27568D] from-[#0E7A80] bg-clip-text text-transparent">
         Featured Products
       </h1>
-
-      <ProductCard product={sampleProduct} />
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 mb-10">
+        <ProductCard product={sampleProduct} />
+        <ProductCard product={sampleProduct} />
+        <ProductCard product={sampleProduct} />
+        <ProductCard product={sampleProduct} />
+      </div>
     </div>
   );
 }

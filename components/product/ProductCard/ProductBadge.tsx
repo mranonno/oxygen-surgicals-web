@@ -11,7 +11,11 @@ const ProductBadge = ({ type }: Props) => {
   };
 
   return (
-    <span className={`text-white text-xs px-2 py-1 ${badgeMap[type] || ""}`}>
+    <span
+      className={`text-white text-xs rounded-full px-2 py-1 ${
+        badgeMap[type] || ""
+      }`}
+    >
       {type}
     </span>
   );

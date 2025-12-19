@@ -52,7 +52,7 @@ export default function ShopByCategory() {
           return (
             <div
               key={category.id}
-              className="group cursor-pointer rounded-xl border border-gray-200 bg-white p-5 text-center transition hover:shadow-md hover:border-primary self-center"
+              className="group cursor-pointer rounded-xl w-full border border-gray-200 bg-white p-5 text-center transition hover:shadow-md hover:border-primary self-center"
             >
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gray-50 transition group-hover:bg-primary">
                 <Icon

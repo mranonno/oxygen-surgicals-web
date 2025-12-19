@@ -19,7 +19,7 @@ export default function Slider() {
       <SwiperSlide>
         <div className="relative w-full h-[520px]">
           <Image
-            src="/banner/slider_2.jpg"
+            src="/banner/slider_1.jpg"
             alt="banner"
             fill
             className="object-cover"
@@ -31,7 +31,7 @@ export default function Slider() {
       <SwiperSlide>
         <div className="relative w-full h-[520px]">
           <Image
-            src="/banner/slider_1.jpg"
+            src="/banner/slider_2.jpg"
             alt="banner"
             fill
             className="object-cover"
