@@ -1,6 +1,6 @@
 {
   "version": "0.2",
   "language": "en",
-  "words": ["surgicals", "oxygensurgicals"],
+  "words": ["surgicals", "oxygensurgicals", "Oximeters"],
   "ignorePaths": ["node_modules", ".next", "dist"]
 }

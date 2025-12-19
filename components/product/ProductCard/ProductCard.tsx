@@ -5,13 +5,12 @@ import ProductBadge from "./ProductBadge";
 import ProductPrice from "./ProductPrice";
 
 type Product = {
-  badge?: string;
   name: string;
   image: string;
   price: number;
   discountPrice?: number;
-  rating?: number; // ⭐ rating (0–5)
-  reviewCount?: number; // optional
+  rating?: number;
+  reviewCount?: number;
   id: number;
 };
 
@@ -21,16 +20,19 @@ type ProductCardProps = {
 
 const ProductCard = ({ product }: ProductCardProps) => {
   return (
-    <div className="group relative border border-gray-200 rounded-xl p-4 bg-white shadow-sm transition-all duration-300">
-      {/* Badge */}
-      <div className="absolute top-3 left-3 z-10">
-        <ProductBadge type={product.badge} />
+    <div className="group relative border border-gray-200 rounded-xl p-4 bg-white shadow-sm hover:shadow-md transition-all duration-300">
+      {/* Save Badge */}
+      <div className="absolute top-4 left-4 z-10">
+        <ProductBadge
+          price={product.price}
+          discountPrice={product.discountPrice}
+        />
       </div>
 
       {/* Image */}
-      <div className="relative w-full aspect-square bg-gray-50 flex items-center justify-center overflow-hidden rounded-lg">
+      <div className="relative w-full aspect-square bg-gray-50 overflow-hidden rounded-lg">
         <Image
-          src={product.image || "/images/Digital Clock J.jpg"}
+          src={product.image}
           alt={product.name}
           fill
           sizes="(max-width: 768px) 100vw, 25vw"
@@ -38,7 +40,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         />
       </div>
 
-      {/* Product Info */}
+      {/* Info */}
       <div className="mt-4 text-left">
         <h3 className="text-sm font-medium text-gray-800 line-clamp-2">
           {product.name}
@@ -52,7 +54,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill={
-                product.rating && product.rating >= star ? "#FACC15" : "#E5E7EB"
+                product.rating && product.rating >= star ? "#F59E0B" : "#E5E7EB"
               }
               className="w-4 h-4"
             >
@@ -67,6 +69,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           )}
         </div>
 
+        {/* Price */}
         <div className="mt-2">
           <ProductPrice
             price={product.price}
@@ -77,18 +80,11 @@ const ProductCard = ({ product }: ProductCardProps) => {
 
       {/* Actions */}
       <div className="mt-4 grid grid-cols-2 gap-2">
-        <button
-          className="w-full rounded-md border border-[#0E7A80] text-[#0E7A80]
-                     py-2 text-sm font-medium hover:bg-[#0E7A80]
-                     hover:text-white transition duration-500"
-        >
+        <button className="w-full rounded-md border border-[#0E7A80] text-[#0E7A80] py-2 text-sm font-medium hover:bg-[#0E7A80] hover:text-white transition">
           Add to Cart
         </button>
 
-        <button
-          className="w-full rounded-md bg-[#0E7A80] text-white
-                     py-2 text-sm font-medium hover:bg-[#0a5e63] transition duration-500"
-        >
+        <button className="w-full rounded-md bg-[#0E7A80] text-white py-2 text-sm font-medium hover:bg-[#0a5e63] transition">
           Buy Now
         </button>
       </div>
