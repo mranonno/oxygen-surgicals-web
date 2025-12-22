@@ -43,7 +43,7 @@ export default function ShopByCategory() {
   return (
     <div className="w-full my-12 px-4">
       <h1 className="text-3xl font-bold text-center mb-8 bg-linear-to-r to-[#27568D] from-[#0E7A80] bg-clip-text text-transparent">
-        Shop By Popular Categories
+        Popular Categories
       </h1>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 place-items-center text-center">

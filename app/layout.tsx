@@ -17,7 +17,14 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Oxygen Surgicals",
-  description: "Oxygen Surgicals - All medical supplies you need.",
+  description: "Buy quality medical products",
+  keywords: ["medical", "healthcare", "equipment"],
+  authors: [{ name: "Your Brand" }],
+  openGraph: {
+    title: "Oxygen Surgicals",
+    description: "Buy quality medical products",
+    images: ["/public/logo/oxygensurgicals.png"],
+  },
 };
 
 export default function RootLayout({

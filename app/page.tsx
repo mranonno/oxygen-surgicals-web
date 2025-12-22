@@ -1,13 +1,17 @@
-"use client";
-
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import type { Metadata } from "next";
 import ShopByCategory from "@/components/ShopByCategory";
 import Slider from "@/components/ui/slider/Slider";
 import { ProductCard } from "@/components/product/ProductCard";
 import { sampleProduct } from "@/data/sampleProduct";
 import CategoriesBar from "@/components/common/CategoriesBar";
+
+export const metadata: Metadata = {
+  title: "Home | Oxygen Surgicals",
+  description: "Your one-stop shop for premium medical equipment and supplies.",
+};
 
 export default function Home() {
   return (
