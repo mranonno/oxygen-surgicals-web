@@ -3,6 +3,7 @@
 import Image from "next/image";
 import ProductBadge from "./ProductBadge";
 import ProductPrice from "./ProductPrice";
+import { useCartStore } from "@/store/cartStore";
 
 type Product = {
   name: string;
@@ -80,7 +81,18 @@ const ProductCard = ({ product }: ProductCardProps) => {
 
       {/* Actions */}
       <div className="mt-4 grid grid-cols-2 gap-2">
-        <button className="w-full rounded-md border border-[#0E7A80] text-[#0E7A80] py-2 text-sm font-medium hover:bg-[#0E7A80] hover:text-white transition">
+        <button
+          onClick={() =>
+            useCartStore.getState().addToCart({
+              id: product.id,
+              name: product.name,
+              price: product.price,
+              discountPrice: product.discountPrice,
+              image: product.image,
+            })
+          }
+          className="w-full rounded-md border border-[#0E7A80] text-[#0E7A80] py-2 text-sm font-medium hover:bg-[#0E7A80] hover:text-white transition"
+        >
           Add to Cart
         </button>
 
