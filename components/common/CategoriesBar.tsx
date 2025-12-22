@@ -13,8 +13,8 @@ const categories = [
 
 const CategoriesBar = () => {
   return (
-    <div className="w-full bg-white border-b border-gray-200 mb-4">
-      <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto bg-white border-y border-gray-200 mb-4">
+      <div className="flex justify-start">
         <ul
           className="flex items-center gap-6 overflow-x-auto py-3
                      text-sm font-medium text-gray-800

@@ -6,7 +6,6 @@ import ShopByCategory from "@/components/ShopByCategory";
 import Slider from "@/components/ui/slider/Slider";
 import { ProductCard } from "@/components/product/ProductCard";
 import { sampleProduct } from "@/data/sampleProduct";
-import CategoriesBar from "@/components/common/CategoriesBar";
 
 export const metadata: Metadata = {
   title: "Home | Oxygen Surgicals",
@@ -16,7 +15,6 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="w-full text-center mt-1">
-      <CategoriesBar />
       <Slider />
       <ShopByCategory />
       <h1 className="text-3xl font-bold text-center mb-8 bg-linear-to-r to-[#27568D] from-[#0E7A80] bg-clip-text text-transparent">

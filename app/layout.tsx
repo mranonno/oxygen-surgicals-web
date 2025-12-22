@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 import { TopNavbar } from "@/components/common/TopNavbar";
+import CategoriesBar from "@/components/common/CategoriesBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,7 +40,8 @@ export default function RootLayout({
       >
         <TopNavbar />
         <Navbar />
-        <div className="max-w-7xl mx-auto px-4">{children}</div>
+        <CategoriesBar />
+        <div className="max-w-7xl mx-auto">{children}</div>
         <Footer />
       </body>
     </html>
