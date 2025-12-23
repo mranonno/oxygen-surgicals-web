@@ -11,7 +11,7 @@ const CartSummary = () => {
   );
 
   return (
-    <div className="border rounded-lg p-4 bg-gray-50">
+    <div className="border border-gray-200 rounded-lg p-4 bg-gray-50">
       <h3 className="font-semibold mb-3">Order Summary</h3>
 
       <div className="flex justify-between text-sm mb-2">
@@ -24,12 +24,12 @@ const CartSummary = () => {
         <span>৳60</span>
       </div>
 
-      <div className="flex justify-between font-semibold text-lg border-t pt-3">
+      <div className="flex justify-between font-semibold text-lg border-t border-gray-200 pt-3">
         <span>Total</span>
         <span>৳{total + 60}</span>
       </div>
 
-      <button className="w-full mt-4 bg-[#0E7A80] text-white py-2 rounded-md">
+      <button className="w-full mt-4 cursor-pointer bg-[#0E7A80] text-white py-2 rounded-md">
         Proceed to Checkout
       </button>
     </div>
