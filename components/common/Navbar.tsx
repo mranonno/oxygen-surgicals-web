@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { ShoppingCart, Menu, X, User, Search } from "lucide-react";
+import { Menu, X, User, Search, ShoppingBag } from "lucide-react";
 import { useCartStore } from "@/store/cartStore";
 
 export default function Navbar() {
@@ -57,9 +57,9 @@ export default function Navbar() {
           </Link>
 
           <Link href="/cart" className="relative hover:text-[#137577]">
-            <ShoppingCart size={22} />
+            <ShoppingBag size={22} />
             {totalItems > 0 && (
-              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-2">
+              <span className="absolute -top-3 -right-3 bg-red-500 text-white text-xs rounded-full px-2">
                 {totalItems}
               </span>
             )}
@@ -126,7 +126,7 @@ export default function Navbar() {
             onClick={() => setOpen(false)}
             className="flex items-center relative gap-2 hover:text-[#137577]"
           >
-            <ShoppingCart size={20} /> Cart
+            <ShoppingBag size={20} /> Cart
             {totalItems > 0 && (
               <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-2">
                 {totalItems}
