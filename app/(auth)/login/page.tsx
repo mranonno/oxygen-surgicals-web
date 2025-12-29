@@ -18,8 +18,8 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-      <div className="w-full max-w-md bg-white shadow-xl rounded-2xl p-8">
+    <div className="min-h-screen flex items-center justify-center px-4">
+      <div className="w-full max-w-md bg-white border border-gray-200 shadow-lg rounded-2xl p-8">
         <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">
           Login
         </h2>
@@ -40,7 +40,7 @@ export default function LoginPage() {
                 value={form.email}
                 placeholder="Enter your email"
                 required
-                className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                className="w-full pl-10 pr-4 py-2 border border-gray-200 focus:border-none rounded-lg focus:ring-2 focus:ring-[#0E7A80] outline-none"
               />
             </div>
           </div>
@@ -61,7 +61,7 @@ export default function LoginPage() {
                 value={form.password}
                 placeholder="Enter your password"
                 required
-                className="w-full pl-10 pr-10 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                className="w-full pl-10 pr-10 py-2 border border-gray-200 focus:border-none rounded-lg focus:ring-2 focus:ring-[#0E7A80] outline-none"
               />
 
               {/* Show / Hide Password */}
@@ -76,10 +76,10 @@ export default function LoginPage() {
 
             {/* Forgot Password */}
             <div className="text-right mt-2 flex items-center justify-end gap-1">
-              <KeyRound size={16} className="text-blue-600" />
+              <KeyRound size={16} className="text-[#0E7A80]" />
               <Link
                 href="/forgot-password"
-                className="text-sm text-blue-600 hover:underline font-medium"
+                className="text-sm text-[#0E7A80] hover:underline font-medium"
               >
                 Forgot Password?
               </Link>
@@ -89,7 +89,8 @@ export default function LoginPage() {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-lg font-semibold transition flex items-center justify-center gap-2"
+            className="w-full bg-[#0E7A80] 
+                       hover:bg-[#0a5e63] text-white py-2.5 rounded-lg font-semibold transition flex items-center justify-center gap-2"
           >
             <LogIn size={20} />
             Login
@@ -100,7 +101,7 @@ export default function LoginPage() {
           Don’t have an account?{" "}
           <Link
             href="/register"
-            className="text-blue-600 font-semibold hover:underline"
+            className="text-[#0E7A80] font-semibold hover:underline"
           >
             Register
           </Link>
