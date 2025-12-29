@@ -18,21 +18,38 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4">
-      <div className="w-full max-w-md bg-white border border-gray-200 shadow-lg rounded-2xl p-8">
-        <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">
-          Login
+    <div className=" flex items-center justify-center px-4  pt-24 pb-28">
+      <div className="w-full max-w-lg bg-white border border-gray-200 shadow-xl rounded-2xl p-8 sm:p-10">
+        {/* Heading */}
+        <h2 className="text-3xl font-semibold text-center text-gray-800">
+          Welcome Back 👋
         </h2>
+        <p className="text-sm text-center text-gray-500 mt-1">
+          Please login to continue
+        </p>
 
+        {/* Divider */}
+        <div className="flex items-center gap-4 my-8">
+          <div className="flex-1 h-px bg-[#0E7A80]/40"></div>
+          <span className="text-sm font-medium text-gray-600 whitespace-nowrap">
+            Login with your Email
+          </span>
+          <div className="flex-1 h-px bg-[#0E7A80]/40"></div>
+        </div>
+
+        {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-5">
           {/* Email */}
           <div>
-            <label className="block mb-1 font-medium text-gray-600">
+            <label className="block mb-1 text-sm font-medium text-gray-600">
               Email
             </label>
 
             <div className="relative">
-              <Mail size={20} className="absolute left-3 top-3 text-gray-500" />
+              <Mail
+                size={18}
+                className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+              />
               <input
                 type="email"
                 name="email"
@@ -40,19 +57,25 @@ export default function LoginPage() {
                 value={form.email}
                 placeholder="Enter your email"
                 required
-                className="w-full pl-10 pr-4 py-2 border border-gray-200 focus:border-none rounded-lg focus:ring-2 focus:ring-[#0E7A80] outline-none"
+                aria-label="Email"
+                className="w-full h-11 pl-10 pr-4 border border-gray-200 rounded-lg
+                           focus:ring-2 focus:ring-[#0E7A80]/40 focus:border-[#0E7A80]
+                           outline-none transition"
               />
             </div>
           </div>
 
           {/* Password */}
           <div>
-            <label className="block mb-1 font-medium text-gray-600">
+            <label className="block mb-1 text-sm font-medium text-gray-600">
               Password
             </label>
 
             <div className="relative">
-              <Lock size={20} className="absolute left-3 top-3 text-gray-500" />
+              <Lock
+                size={18}
+                className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+              />
 
               <input
                 type={showPass ? "text" : "password"}
@@ -61,22 +84,25 @@ export default function LoginPage() {
                 value={form.password}
                 placeholder="Enter your password"
                 required
-                className="w-full pl-10 pr-10 py-2 border border-gray-200 focus:border-none rounded-lg focus:ring-2 focus:ring-[#0E7A80] outline-none"
+                aria-label="Password"
+                className="w-full h-11 pl-10 pr-10 border border-gray-200 rounded-lg
+                           focus:ring-2 focus:ring-[#0E7A80]/40 focus:border-[#0E7A80]
+                           outline-none transition"
               />
 
-              {/* Show / Hide Password */}
               <button
                 type="button"
                 onClick={() => setShowPass(!showPass)}
-                className="absolute right-3 top-3 text-gray-500"
+                aria-label="Toggle password visibility"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition"
               >
-                {showPass ? <EyeOff size={20} /> : <Eye size={20} />}
+                {showPass ? <EyeOff size={18} /> : <Eye size={18} />}
               </button>
             </div>
 
-            {/* Forgot Password */}
-            <div className="text-right mt-2 flex items-center justify-end gap-1">
-              <KeyRound size={16} className="text-[#0E7A80]" />
+            {/* Forgot password */}
+            <div className="flex justify-end items-center gap-1 mt-2">
+              <KeyRound size={14} className="text-[#0E7A80]" />
               <Link
                 href="/forgot-password"
                 className="text-sm text-[#0E7A80] hover:underline font-medium"
@@ -86,24 +112,27 @@ export default function LoginPage() {
             </div>
           </div>
 
-          {/* Submit Button */}
+          {/* Submit */}
           <button
             type="submit"
-            className="w-full bg-[#0E7A80] 
-                       hover:bg-[#0a5e63] text-white py-2.5 rounded-lg font-semibold transition flex items-center justify-center gap-2"
+            className="w-full h-11 bg-[#0E7A80] hover:bg-[#0a5e63]
+                       text-white rounded-lg font-semibold
+                       transition flex items-center justify-center gap-2
+                       active:scale-[0.98]"
           >
-            <LogIn size={20} />
+            <LogIn size={18} />
             Login
           </button>
         </form>
 
-        <p className="text-center text-gray-600 mt-4">
+        {/* Footer */}
+        <p className="text-center text-gray-600 mt-6 text-sm">
           Don’t have an account?{" "}
           <Link
             href="/register"
             className="text-[#0E7A80] font-semibold hover:underline"
           >
-            Register
+            Register Now
           </Link>
         </p>
       </div>
