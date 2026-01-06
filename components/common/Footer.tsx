@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Brand */}
         <div>
-          <h2 className="text-xl font-bold text-gray-900 mb-3">
+          <h2 className="text-xl font-bold  mb-3 bg-linear-to-r from-[#0E7A80] to-[#27568D] bg-clip-text text-transparent">
             Oxygen Surgicals
           </h2>
           <p className="text-sm text-gray-600">
