@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <nav className="w-full bg-white shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto  py-3 flex items-center justify-between gap-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image
@@ -24,7 +24,7 @@ export default function Navbar() {
           />
           <span className="text-2xl flex flex-col text-start font-bold bg-linear-to-r from-[#0E7A80] to-[#27568D] bg-clip-text text-transparent">
             OXYGEN
-            <span className="text-2xl font-bold bg-linear-to-r from-[#0E7A80] to-[#27568D] bg-clip-text text-transparent -mt-2 text-center">
+            <span className="text-2xl font-bold bg-linear-to-r from-[#0E7A80] to-[#27568D] bg-clip-text text-transparent -mt-1 text-center">
               SURGICALS
             </span>
           </span>

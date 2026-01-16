@@ -48,7 +48,7 @@ const CartItem = ({ item }: { item: CartProduct }) => {
             disabled={item.quantity === 1}
             aria-label="Decrease quantity"
             className="flex items-center justify-center w-8 h-8 text-gray-600
-                       hover:bg-[#0E7A80] hover:text-white transition
+                       hover:bg-gray-300 hover:text-gray-900 transition
                        disabled:opacity-40 disabled:pointer-events-none
                        active:scale-95"
           >
@@ -63,7 +63,7 @@ const CartItem = ({ item }: { item: CartProduct }) => {
             onClick={() => increaseQty(item.id)}
             aria-label="Increase quantity"
             className="flex items-center justify-center w-8 h-8 text-gray-600
-                       hover:bg-[#0E7A80] hover:text-white transition
+                       hover:bg-gray-300 hover:text-gray-900 transition
                        active:scale-95"
           >
             <Plus size={14} strokeWidth={2} />

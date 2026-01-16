@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -6,7 +7,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Brand */}
         <div>
-          <h2 className="text-xl font-bold  mb-3 bg-linear-to-r from-[#0E7A80] to-[#27568D] bg-clip-text text-transparent">
+          <Image
+            src="/logo/oxygensurgicals.png"
+            alt="Oxygen Surgicals Logo"
+            width={60}
+            height={60}
+          />
+          <h2 className="text-xl pt-2 font-bold  mb-3 bg-linear-to-r from-[#0E7A80] to-[#27568D] bg-clip-text text-transparent">
             Oxygen Surgicals
           </h2>
           <p className="text-sm text-gray-600">
